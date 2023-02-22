@@ -1,0 +1,43 @@
+
+html, body {
+	margin: 0;
+	background-color: black;
+	color: white;
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	font-family: sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+
+#maincontent {
+	flex: 1 1 auto;
+	display: flex;
+}
+
+#weaponlist {
+	flex: 0 0 auto;
+	width: 15em;
+}
+
+#traitList {
+	flex: 0 0 auto;
+	display: grid;
+	grid-template-columns: 15em 5em 5em 5em 5em;
+	grid-auto-rows: 2em;
+}
+
+#traitList > .header {
+	font-weight: bold;
+}
+
+#traitList > div.value {
+	text-align: center;
+}
+
+#traitList .valueCheckbox {
+	transform: scale(3);
+}
