@@ -222,7 +222,7 @@
     "secondaryAction": "Braced - Projectile",
     "specialAction": "Vent Heat",
     "classes": "Veteran",
-    "traits": ["Blaze Away", "Gets Hot!", "Gloryhunter", "Shattering Impact", "Volatile Impact"],
+    "traits": ["Blaze Away", "Gets Hot!", "Gloryhunter", "Shattering Impact", "Volatile"],
     "description": "The Plasma Gun is a veteran exclusive ranged weapon.",
     "image": "/static/img/rangedWeapons/plasmagun.png",
     "tag": ["High Damage", "Charged Attack"],
