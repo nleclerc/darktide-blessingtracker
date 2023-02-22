@@ -162,7 +162,7 @@
     "secondaryAction": "Relentless",
     "specialAction": "Parry",
     "classes": "Zealot | Veteran",
-    "traits": ["Devastating Strike", "Hammerblow", "Rampage", "Savage Sweep", "Shred", "Skullcrusher", "Thunderstrike", "Vicious Slice", "Wrath"],
+    "traits": ["Devastating Strike", "Hammerblow", "Rampage", "Savage Sweep", "Shred", "Skullcrusher", "Thunderstrike", "Trauma", "Vicious Slice", "Wrath"],
     "description": "The Sword is a melee weapon.",
     "image": "/static/img/meleeWeapons/sword.png",
     "tag": ["Flurry", "Crowd Control"],
