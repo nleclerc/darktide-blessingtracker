@@ -59,7 +59,7 @@ function createTraitValue(valueId) {
 
 function displayTraits(item) {
 	for (let traitName of item.traits) {
-		traitList.append(createDiv('item',traitName))
+		traitList.append(createDiv('item',traitName.replace(/ ?\(.*\)$/,''))) // Remove weapon category from blessing name.
 		traitList.append(createTraitValue(`${item.name}:${traitName}:I`))
 		traitList.append(createTraitValue(`${item.name}:${traitName}:II`))
 		traitList.append(createTraitValue(`${item.name}:${traitName}:III`))
