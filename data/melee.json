@@ -114,7 +114,7 @@
     "secondaryAction": "Strikedown",
     "specialAction": "Punch",
     "classes": "Ogryn",
-    "traits": ["Brutal Momentum", "Confident Strike", "Perfect Strike", "Skullcrusher", "Thrust", "Thunderous"],
+    "traits": ["Brutal Momentum", "Confident Strike", "Perfect Strike", "Skullcrusher", "Thrust", "Thunderous", "Trauma"],
     "description": "The Latrine Shovel is an Ogryn specific melee weapon.",
     "image": "/static/img/meleeWeapons/latrineshovel.png",
     "tag": ["Crowd Control", "Versatile"],
