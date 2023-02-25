@@ -18,7 +18,7 @@
     "secondaryAction": "Strikedown",
     "specialAction": "Special Melee Attack",
     "classes": "Zealot | Veteran",
-    "traits": ["All or Nothing", "Brutal Momentum", "Decapitator", "Decimator (Tactical Axe)", "Headtaker", "Limbsplitter", "Shred"],
+    "traits": ["All or Nothing", "Brutal Momentum", "Decimator (Tactical Axe)", "Headtaker", "Limbsplitter", "Shred"],
     "description": "The Tactical Axe is a melee weapon.",
     "image": "/static/img/meleeWeapons/axetactical.png",
     "tag": ["Flurry", "Assassin"],
