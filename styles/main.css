@@ -20,13 +20,14 @@ body {
 
 #weaponlist {
 	flex: 0 0 auto;
-	width: 15em;
+	width: 14em;
+	overflow: auto;
 }
 
 #traitList {
 	flex: 0 0 auto;
 	display: grid;
-	grid-template-columns: 15em 5em 5em 5em 5em;
+	grid-template-columns: 12em 5em 5em 5em 5em;
 	grid-auto-rows: 2em;
 }
 
