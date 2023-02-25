@@ -198,7 +198,7 @@
     "secondaryAction": "ADS - Semi-automatic",
     "specialAction": "Torch",
     "classes": "Psyker | Zealot | Veteran",
-    "traits": ["Between the Eyes", "Deadly Accurate", "Efficiency", "Falter", "Ghost", "Headhunter", "Hit & Run", "Infernus (Infantry Lasgun & Helbore Lasgun)", "No Respite", "Opening Salvo"],
+    "traits": ["Between the Eyes", "Deadly Accurate", "Efficiency", "Falter", "Ghost", "Headhunter", "Infernus (Infantry Lasgun & Helbore Lasgun)", "No Respite", "Opening Salvo"],
     "description": "The Lasgun (Infantry) is a semi-automatic ranged weapon.",
     "image": "/static/img/rangedWeapons/lasguninfantry.png",
     "tag": ["Versatile", "High Capacity"],
