@@ -30,7 +30,7 @@
     "secondaryAction": "ADS - Fully Automatic",
     "specialAction": "Torch",
     "classes": "Zealot | Psyker | Veteran",
-    "traits": ["Deathspitter", "Dumdum", "Fire Frenzy", "Hit & Run", "Punishing Salvo", "Raking Fire", "Run N Gun", "Speedload", "Stripped Down", "Sustained Fire", "Terrifying Barrage"],
+    "traits": ["Deathspitter", "Dumdum", "Fire Frenzy", "Hit & Run", "Punishing Salvo", "Raking Fire", "Speedload", "Stripped Down", "Sustained Fire", "Terrifying Barrage"],
     "description": "The Braced Autogun is a fully automatic ranged weapon.",
     "image": "/static/img/rangedWeapons/autoguninfantry.png",
     "tag": ["Rapid Fire", "Precise"],
