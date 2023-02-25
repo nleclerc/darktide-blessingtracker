@@ -18,7 +18,7 @@
     "secondaryAction": "ADS - Semi-automatic",
     "specialAction": "Bash",
     "classes": "Zealot | Psyker | Veteran",
-    "traits": ["Between the Eyes", "Crucian Roulette", "Deadly Accurate", "Falter", "Ghost", "Headhunter", "Hit & Run", "No Respite", "Opening Salvo", "Surgical", "Terrifying Barrage"],
+    "traits": ["Between the Eyes", "Crucian Roulette", "Deadly Accurate", "Falter", "Ghost", "Headhunter", "No Respite", "Opening Salvo", "Surgical"],
     "description": "The Headhunter Autogun is a burst-fire ranged weapon.",
     "image": "/static/img/rangedWeapons/autogunheadhunter.png",
     "tag": ["Burst Fire", "Precise"],
