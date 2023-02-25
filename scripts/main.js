@@ -70,6 +70,7 @@ function displayTraits(item) {
 (async function() {
 	const meleeData = await loadJson('data/melee.json','melee')
 	const rangedData = await loadJson('data/ranged.json','ranged')
+	const allData = meleeData.concat([{name:'---------',traits:[]}],rangedData)
 
 	const weaponMap = {}
 	mapData(meleeData,weaponMap)
@@ -77,6 +78,7 @@ function displayTraits(item) {
 
 	console.debug('Loaded melee data:',meleeData)
 	console.debug('Loaded ranged data:',rangedData)
+	console.debug('Loaded all data:',allData)
 
 	document.querySelector('#meleeButton').addEventListener('click',()=> {
 		loadData(meleeData)
@@ -86,11 +88,15 @@ function displayTraits(item) {
 		loadData(rangedData)
 	})
 
+	document.querySelector('#allButton').addEventListener('click',()=> {
+		loadData(allData)
+	})
+
 	weaponSelector.addEventListener('change',(event)=> {
 		console.debug('Selection change:',event.target.value,weaponMap[event.target.value])
 		clearTraits()
 		displayTraits(weaponMap[event.target.value])
 	})
 
-	loadData(meleeData)
+	loadData(allData)
 })()
