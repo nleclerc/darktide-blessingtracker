@@ -162,7 +162,7 @@
     "secondaryAction": "Braced - Shotgun",
     "specialAction": "Bash",
     "classes": "Ogryn",
-    "traits": ["Blaze Away", "Expansive", "Full Bore", "Pierce", "Punishing Fire", "Run N Gun", "Surgical"],
+    "traits": ["Blaze Away", "Expansive", "Full Bore", "Pierce", "Punishing Fire", "Run N Gun", "Surgical", "Terrifying Barrage"],
     "description": "The Kickback is an Ogryn exclusive ranged weapon.",
     "image": "/static/img/rangedWeapons/kickback.png",
     "tag": ["Spreadshot", "Close Combat"],
