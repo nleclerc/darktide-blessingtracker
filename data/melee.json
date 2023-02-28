@@ -222,7 +222,7 @@
     "secondaryAction": "Relentless",
     "specialAction": "Activate",
     "classes": "Zealot",
-    "traits": ["Hammerblow", "Headtaker", "Momentum", "Shock & Awe", "Skullcrusher", "Slaughterer", "Thrust", "Thunderstrike", "Trauma"],
+    "traits": ["Hammerblow", "Headtaker", "Momentum", "Shock & Awe", "Skullcrusher", "Slaughterer", "Thrust", "Thunderous", "Thunderstrike", "Trauma"],
     "description": "The Thunder Hammer is a Zealot specific weapon.",
     "image": "/static/img/meleeWeapons/thunderhammer.png",
     "tag": ["Crowd Control", "Obliterating"],
