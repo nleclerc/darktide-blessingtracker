@@ -258,7 +258,7 @@
     "secondaryAction": "Braced - Projectile",
     "specialAction": "Bash",
     "classes": "Ogryn",
-    "traits": ["Adhesive Charge", "Blaze Away", "Gloryhunter", "Inspiring Barrage", "Pierce", "Shattering Impact"],
+    "traits": ["Adhesive Charge", "Blaze Away", "Gloryhunter", "Pierce", "Shattering Impact"],
     "description": "The Rumbler is an Ogryn exclusive ranged weapon.",
     "image": "/static/img/rangedWeapons/rumbler.png",
     "tag": ["Explosive", "Delayed Detonation"],
