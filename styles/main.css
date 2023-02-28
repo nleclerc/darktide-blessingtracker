@@ -50,4 +50,10 @@ h1 {
 #traitList .valueCheckbox {
 	transform: scale(2);
 	accent-color: deepskyblue;
+	cursor: pointer;
+}
+
+#traitList .valueCheckbox:disabled {
+	opacity: .2;
+	cursor: not-allowed;
 }

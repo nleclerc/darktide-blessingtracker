@@ -6,8 +6,12 @@ const traitList = document.querySelector('#traitList')
 
 async function loadJson(path,property) {
 	response = await fetch(path)
-	const jsonData = await response.json()
-	return jsonData[property]
+	let jsonData = await response.json()
+
+	if (property)
+		jsonData = jsonData[property]
+
+	return jsonData
 }
 
 function loadData(dataArray) {
@@ -40,16 +44,21 @@ function createDiv(classes,text) {
 	return el
 }
 
-function createTraitValue(valueId) {
+function createTraitValue(valueId, isDisabled) {
 	const checkbox = document.createElement('input')
 	checkbox.classList.add('valueCheckbox')
 	checkbox.type = 'checkbox'
-	checkbox.dataset.valueid = valueId
-	checkbox.checked = localStorage[valueId] == 'true'
 
-	checkbox.addEventListener('change',(event)=>{
-		localStorage[valueId] = event.target.checked
-	})
+	if (isDisabled) {
+		checkbox.disabled = true
+	} else {
+		checkbox.dataset.valueid = valueId
+		checkbox.checked = localStorage[valueId] == 'true'
+
+		checkbox.addEventListener('change',(event)=>{
+			localStorage[valueId] = event.target.checked
+		})
+	}
 
 	const container = createDiv('item value')
 	container.append(checkbox)
@@ -57,13 +66,13 @@ function createTraitValue(valueId) {
 	return container
 }
 
-function displayTraits(item) {
+function displayTraits(item, isDisabled) {
 	for (let traitName of item.traits) {
 		traitList.append(createDiv('item',traitName.replace(/ ?\(.*\)$/,''))) // Remove weapon category from blessing name.
-		traitList.append(createTraitValue(`${item.name}:${traitName}:I`))
-		traitList.append(createTraitValue(`${item.name}:${traitName}:II`))
-		traitList.append(createTraitValue(`${item.name}:${traitName}:III`))
-		traitList.append(createTraitValue(`${item.name}:${traitName}:IV`))
+		traitList.append(createTraitValue(`${item.name}:${traitName}:I`,isDisabled(traitName,1)))
+		traitList.append(createTraitValue(`${item.name}:${traitName}:II`,isDisabled(traitName,2)))
+		traitList.append(createTraitValue(`${item.name}:${traitName}:III`,isDisabled(traitName,3)))
+		traitList.append(createTraitValue(`${item.name}:${traitName}:IV`,isDisabled(traitName,4)))
 	}
 }
 
@@ -71,6 +80,11 @@ function displayTraits(item) {
 	const meleeData = await loadJson('data/melee.json','melee')
 	const rangedData = await loadJson('data/ranged.json','ranged')
 	const allData = meleeData.concat([{name:'---------',traits:[]}],rangedData)
+
+	const disabledData = await loadJson('data/disabled.json')
+	function isDisabled(trait,value) {
+		return disabledData[trait] && disabledData[trait].includes(value)
+	}
 
 	const weaponMap = {}
 	mapData(meleeData,weaponMap)
@@ -95,7 +109,7 @@ function displayTraits(item) {
 	weaponSelector.addEventListener('change',(event)=> {
 		console.debug('Selection change:',event.target.value,weaponMap[event.target.value])
 		clearTraits()
-		displayTraits(weaponMap[event.target.value])
+		displayTraits(weaponMap[event.target.value],isDisabled)
 	})
 
 	loadData(allData)
