@@ -68,11 +68,12 @@ function createTraitValue(valueId, isDisabled) {
 
 function displayTraits(item, isDisabled) {
 	for (let traitName of item.traits) {
-		traitList.append(createDiv('item',traitName.replace(/ ?\(.*\)$/,''))) // Remove weapon category from blessing name.
-		traitList.append(createTraitValue(`${item.name}:${traitName}:I`,isDisabled(traitName,1)))
-		traitList.append(createTraitValue(`${item.name}:${traitName}:II`,isDisabled(traitName,2)))
-		traitList.append(createTraitValue(`${item.name}:${traitName}:III`,isDisabled(traitName,3)))
-		traitList.append(createTraitValue(`${item.name}:${traitName}:IV`,isDisabled(traitName,4)))
+		const cleanTraitName = traitName.replace(/ ?\(.*\)$/,'')
+		traitList.append(createDiv('item',cleanTraitName)) // Remove weapon category from blessing name.
+		traitList.append(createTraitValue(`${item.name}:${traitName}:I`,isDisabled(cleanTraitName,1)))
+		traitList.append(createTraitValue(`${item.name}:${traitName}:II`,isDisabled(cleanTraitName,2)))
+		traitList.append(createTraitValue(`${item.name}:${traitName}:III`,isDisabled(cleanTraitName,3)))
+		traitList.append(createTraitValue(`${item.name}:${traitName}:IV`,isDisabled(cleanTraitName,4)))
 	}
 }
 
