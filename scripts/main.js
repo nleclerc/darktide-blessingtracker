@@ -77,6 +77,14 @@ function displayTraits(item, isDisabled) {
 	}
 }
 
+function showSelection(weaponMap,itemName,isDisabled) {
+	if (itemName)
+		console.debug('Showing existing selection:',itemName)
+		weaponSelector.value = itemName
+		clearTraits()
+		displayTraits(weaponMap[itemName],isDisabled)
+}
+
 (async function() {
 	const meleeData = await loadJson('data/melee.json','melee')
 	const rangedData = await loadJson('data/ranged.json','ranged')
@@ -95,23 +103,30 @@ function displayTraits(item, isDisabled) {
 	console.debug('Loaded ranged data:',rangedData)
 	console.debug('Loaded all data:',allData)
 
+	const currentSelection = document.location.hash.substring(1).replaceAll('_',' ')
+	console.debug('Current selection:',currentSelection)
+
 	document.querySelector('#meleeButton').addEventListener('click',()=> {
 		loadData(meleeData)
+		showSelection(weaponMap,currentSelection,isDisabled)
 	})
 
 	document.querySelector('#rangedButton').addEventListener('click',()=> {
 		loadData(rangedData)
+		showSelection(weaponMap,currentSelection,isDisabled)
 	})
 
 	document.querySelector('#allButton').addEventListener('click',()=> {
 		loadData(allData)
+		showSelection(weaponMap,currentSelection,isDisabled)
 	})
 
 	weaponSelector.addEventListener('change',(event)=> {
 		console.debug('Selection change:',event.target.value,weaponMap[event.target.value])
-		clearTraits()
-		displayTraits(weaponMap[event.target.value],isDisabled)
+		document.location.hash = event.target.value.replaceAll(' ','_')
+		showSelection(weaponMap,event.target.value,isDisabled)
 	})
 
 	loadData(allData)
+	showSelection(weaponMap,currentSelection,isDisabled)
 })()
