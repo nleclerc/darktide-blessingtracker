@@ -78,11 +78,12 @@ function displayTraits(item, isDisabled) {
 }
 
 function showSelection(weaponMap,itemName,isDisabled) {
-	if (itemName)
+	clearTraits()
+	if (weaponMap[itemName]) {
 		console.debug('Showing existing selection:',itemName)
 		weaponSelector.value = itemName
-		clearTraits()
 		displayTraits(weaponMap[itemName],isDisabled)
+	}
 }
 
 (async function() {
