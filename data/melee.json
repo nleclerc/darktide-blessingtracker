@@ -198,7 +198,7 @@
     "secondaryAction": "Relentless",
     "specialAction": "Special Melee Attack",
     "classes": "Zealot",
-    "traits": ["Brutal Momentum", "Deathblow", "Headtaker (Heavy Sword)", "Devastating Strike", "Perfect Strike", "Rampage", "Savage Sweep", "Wrath"],
+    "traits": ["Deathblow", "Headtaker (Heavy Sword)", "Perfect Strike", "Rampage", "Savage Sweep", "Wrath"],
     "description": "The Heavy Sword is a two-handed melee weapon.",
     "image": "/static/img/meleeWeapons/swordheavy.png",
     "tag": ["Cleaving Strike", "Strikedown"],
