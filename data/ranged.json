@@ -42,7 +42,7 @@
     "secondaryAction": "Braced - Fully Automatic",
     "specialAction": "Torch",
     "classes": "Zealot | Psyker | Veteran",
-    "traits": ["Blaze Away", "Cavalcade", "Pinning Fire", "Powderburn", "Raking Fire", "Speedload", "Sustained Fire", "Terrifying Barrage"],
+    "traits": ["Blaze Away", "Cavalcade", "Inspiring Barrage", "Pinning Fire", "Powderburn", "Raking Fire", "Speedload", "Sustained Fire", "Terrifying Barrage"],
     "description": "The Autopistol is a fully automatic ranged weapon.",
     "image": "/static/img/rangedWeapons/autopistol.png",
     "tag": ["Rapid Fire", "Mobile"],
