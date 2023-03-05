@@ -30,7 +30,7 @@
     "secondaryAction": "Vanguard",
     "specialAction": "Activate",
     "classes": "Zealot, Veteran",
-    "traits": ["Bloodletter", "Headtaker", "Rev It Up", "Shred", "Slaughterer", "Thrust", "Thunderous"],
+    "traits": ["Bloodletter", "Bloodthirsty", "Headtaker", "Rev It Up", "Shred", "Slaughterer", "Thrust", "Thunderous"],
     "description": "The Chain Axe is a heavy melee weapon.",
     "image": "/static/img/meleeWeapons/chainaxe.png",
     "tag": ["High Damage", "Ravage"],
