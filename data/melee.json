@@ -102,7 +102,7 @@
     "secondaryAction": "Strikedown",
     "specialAction": "Activate",
     "classes": "Zealot",
-    "traits": ["Bloodletter", "Momentum", "Perfect Strike", "Rampage", "Rev It Up", "Savage Sweep", "Shred", "Wrath"],
+    "traits": ["Bloodletter", "Bloodthirsty", "Momentum", "Perfect Strike", "Rampage", "Rev It Up", "Savage Sweep", "Shred", "Wrath"],
     "description": "The Eviscerator is a melee weapon.",
     "image": "/static/img/meleeWeapons/eviscerator.png",
     "tag": ["Unstoppable", "Ravage"],
