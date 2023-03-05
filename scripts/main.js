@@ -3,6 +3,9 @@ console.log('Starting...')
 
 const weaponSelector = document.querySelector('#weaponlist')
 const traitList = document.querySelector('#traitList')
+const checkboxMap = {}
+
+const DIMMED_CLASS = 'dimmed'
 
 async function loadJson(path,property) {
 	response = await fetch(path)
@@ -44,7 +47,38 @@ function createDiv(classes,text) {
 	return el
 }
 
-function createTraitValue(valueId, isDisabled) {
+function getLevelString(value) {
+	switch(value) {
+		case 1:
+			return 'I'
+		case 2:
+			return 'II'
+		case 3:
+			return 'III'
+		case 4:
+			return 'IV'
+		default:
+			throw new Error('Invalid value:',value)
+	}
+}
+
+function updateTraitDimming(traitName) {
+	console.debug('Updating dimming for:',traitName)
+	const checkboxes = document.querySelectorAll(`input[data-trait="${traitName}"]`)
+
+	let highestSelected = -1
+
+	for (const box of Array.from(checkboxes).reverse()) {
+		const level = parseInt(box.dataset.level,10)
+		box.classList.toggle('dimmed', highestSelected > level)
+		if (box.checked)
+			highestSelected = Math.max(highestSelected,level)
+	}
+}
+
+function createTraitValue(itemName,traitName,level, isDisabled) {
+	const valueId = `${itemName}:${traitName}:${getLevelString(level)}`
+
 	const checkbox = document.createElement('input')
 	checkbox.classList.add('valueCheckbox')
 	checkbox.type = 'checkbox'
@@ -53,10 +87,13 @@ function createTraitValue(valueId, isDisabled) {
 		checkbox.disabled = true
 	} else {
 		checkbox.dataset.valueid = valueId
+		checkbox.dataset.trait = traitName
+		checkbox.dataset.level = level
 		checkbox.checked = localStorage[valueId] == 'true'
 
 		checkbox.addEventListener('change',(event)=>{
 			localStorage[valueId] = event.target.checked
+			updateTraitDimming(traitName)
 		})
 	}
 
@@ -70,10 +107,11 @@ function displayTraits(item, isDisabled) {
 	for (let traitName of item.traits) {
 		const cleanTraitName = traitName.replace(/ ?\(.*\)$/,'')
 		traitList.append(createDiv('item',cleanTraitName)) // Remove weapon category from blessing name.
-		traitList.append(createTraitValue(`${item.name}:${traitName}:I`,isDisabled(cleanTraitName,1)))
-		traitList.append(createTraitValue(`${item.name}:${traitName}:II`,isDisabled(cleanTraitName,2)))
-		traitList.append(createTraitValue(`${item.name}:${traitName}:III`,isDisabled(cleanTraitName,3)))
-		traitList.append(createTraitValue(`${item.name}:${traitName}:IV`,isDisabled(cleanTraitName,4)))
+		traitList.append(createTraitValue(item.name,traitName,1,isDisabled(cleanTraitName,1)))
+		traitList.append(createTraitValue(item.name,traitName,2,isDisabled(cleanTraitName,2)))
+		traitList.append(createTraitValue(item.name,traitName,3,isDisabled(cleanTraitName,3)))
+		traitList.append(createTraitValue(item.name,traitName,4,isDisabled(cleanTraitName,4)))
+		updateTraitDimming(traitName)
 	}
 }
 

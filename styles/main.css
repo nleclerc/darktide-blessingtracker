@@ -53,6 +53,10 @@ h1 {
 	cursor: pointer;
 }
 
+#traitList .valueCheckbox.dimmed {
+	opacity: .3;
+}
+
 #traitList .valueCheckbox:disabled {
 	opacity: .2;
 	cursor: not-allowed;
