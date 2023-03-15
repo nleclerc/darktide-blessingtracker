@@ -1,4 +1,4 @@
-# Darktide Blessing Tracker
+# Darktide Blessing Tracker (Unofficial)
 
 Tracking what blessings you have extracted in Darktide is very hard.
 Using this page you can know which one you have and/or need.
