@@ -186,7 +186,7 @@
     "secondaryAction": "ADS - Semi-automatic",
     "specialAction": "Bayonet Attack",
     "classes": "Veteran",
-    "traits": ["Falter", "Ghost", "Infernus (Infantry Lasgun & Helbore Lasgun)", "No Respite", "Onslaught", "Surgical", "Sustained Fire"],
+    "traits": ["Falter", "Infernus (Infantry Lasgun & Helbore Lasgun)", "No Respite", "Onslaught", "Surgical", "Sustained Fire"],
     "description": "The Lasgun (Helbore) is a semi-automatic veteran exclusive ranged weapon.",
     "image": "/static/img/rangedWeapons/lasgunhellbore.png",
     "tag": ["Precise", "Charged Attack"],
