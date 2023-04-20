@@ -210,7 +210,7 @@
     "secondaryAction": "ADS - Semi-automatic",
     "specialAction": "Push",
     "classes": "Zealot | Psyker | Veteran",
-    "traits": ["Between the Eyes", "Dumdum", "Ghost", "Infernus (Laspistol)", "Raking Fire", "Reassuringly Accurate", "Run N Gun", "Speedload"],
+    "traits": ["Between the Eyes", "Dumdum", "Ghost", "Infernus (Laspistol)", "Raking Fire", "Reassuringly Accurate", "Speedload"],
     "description": "The Laspistol is a semi-automatic ranged weapon.",
     "image": "/static/img/rangedWeapons/laspistol.png",
     "tag": ["Mobile", "High Capacity"],
