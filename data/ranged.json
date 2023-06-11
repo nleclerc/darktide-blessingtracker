@@ -54,7 +54,7 @@
     "secondaryAction": "ADS - Semi-automatic",
     "specialAction": "Bash",
     "classes": "Zealot | Veteran",
-    "traits": ["Cavalcade", "Gloryhunter", "Pinning Fire", "Shattering Impact", "Surgical"],
+    "traits": ["Cavalcade", "Gloryhunter", "Inspiring Barrage", "Pinning Fire", "Shattering Impact", "Surgical"],
     "description": "The Boltgun is a semi-automatic / burst fire ranged weapon.",
     "image": "/static/img/rangedWeapons/boltgun.png",
     "tag": ["High Damage", "Piercing Shots"],
