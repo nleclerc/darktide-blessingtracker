@@ -42,7 +42,7 @@
     "secondaryAction": "Vanguard",
     "specialAction": "Activate",
     "classes": "Zealot | Psyker | Veteran",
-    "traits": ["Bloodletter", "Bloodthirsty", "Devastating Strike (Chainsword)", "Rampage", "Rev It Up", "Savage Sweep", "Shred", "Skullcrusher", "Wrath"],
+    "traits": ["Bloodletter", "Bloodthirsty", "Devastating Strike (Chainsword)", "Rampage", "Rev It Up", "Savage Sweep", "Shred", "Wrath"],
     "description": "The Chainsword is a one-hand melee weapon.",
     "image": "/static/img/meleeWeapons/chainsword.png",
     "tag": ["Versatile", "Saw Weapon"],
