@@ -102,7 +102,7 @@
     "secondaryAction": "Staff-Bound Smite",
     "specialAction": "Strike",
     "classes": "Psyker",
-    "traits": ["Focused Channeling", "Rending Shockwave", "Run N Gun", "Sustained Fire", "Terrifying Barrage", "Transfer Peril", "Warp Flurry", "Warp Nexus"],
+    "traits": ["Focused Channeling", "Run N Gun", "Terrifying Barrage", "Warp Flurry", "Warp Nexus"],
     "description": "The Force Staff (Surge) is a Psyker exclusive ranged weapon.",
     "image": "/static/img/rangedWeapons/forcestaffsurge.png",
     "tag": ["Force Weapon", "Charged Attack"],
