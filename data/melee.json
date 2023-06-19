@@ -186,7 +186,7 @@
     "secondaryAction": "Strikedown",
     "specialAction": "Warp Charged",
     "classes": "Psyker",
-    "traits": ["Blazing Spirit (Force Sword)", "Bloodthirsty", "Deflector", "Executor", "Exorcist", "Precognition", "Riposte", "Shred", "Slaughterer", "Superiority", "Trauma", "Uncanny Strike", "Unstable Power"],
+    "traits": ["Blazing Spirit (Force Sword)", "Bloodthirsty", "Deflector", "Executor", "Exorcist", "Precognition", "Riposte", "Shred", "Slaughterer", "Superiority", "Uncanny Strike", "Unstable Power"],
     "description": "The Force Sword is a Psyker specific melee weapon.",
     "image": "/static/img/meleeWeapons/swordforce.png",
     "tag": ["Flurry", "Force Weapon"],
