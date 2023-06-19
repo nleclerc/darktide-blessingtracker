@@ -126,7 +126,7 @@
     "secondaryAction": "Warp Shot - Projectile",
     "specialAction": "Strike",
     "classes": "Psyker",
-    "traits": ["Blazing Spirit (Staffs)", "Focused Channeling", "Rending Shockwave", "Run N Gun", "Surge", "Sustained Fire", "Terrifying Barrage", "Transfer Peril", "Warp Flurry", "Warp Nexus"],
+    "traits": ["Blazing Spirit (Staffs)", "Focused Channeling", "Run N Gun", "Surge", "Sustained Fire", "Terrifying Barrage", "Transfer Peril", "Warp Flurry", "Warp Nexus"],
     "description": "The Force Staff (Voidstrike) is a Psyker exclusive ranged weapon.",
     "image": "/static/img/rangedWeapons/forcestaffvoidstrike.png",
     "tag": ["Force Weapon", "Charged Attack"],
