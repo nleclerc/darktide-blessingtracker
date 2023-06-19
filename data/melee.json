@@ -78,7 +78,7 @@
     "secondaryAction": "Strikedown",
     "specialAction": "Punch",
     "classes": "Zealot, Psyker, Veteran",
-    "traits": ["Executor", "Flesh Tearer", "Haymaker", "Lacerate", "Mercy Killer", "Precognition", "Ruthless Backstab", "Riposte", "Shred", "Smackdown", "Uncanny Strike"],
+    "traits": ["Executor", "Flesh Tearer", "Haymaker", "Lacerate", "Mercy Killer", "Precognition", "Ruthless Backstab", "Riposte", "Smackdown", "Uncanny Strike"],
     "description": "The Combat Blade is a one-handed melee weapon.",
     "image": "/static/img/meleeWeapons/combatblade.png",
     "tag": ["Swiftstrike", "Assassin"],
