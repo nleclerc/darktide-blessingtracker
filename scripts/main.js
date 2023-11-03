@@ -107,10 +107,10 @@ function displayTraits(item, isDisabled) {
 	for (let traitName of item.traits) {
 		const cleanTraitName = traitName.replace(/ ?\(.*\)$/,'')
 		traitList.append(createDiv('item',cleanTraitName)) // Remove weapon category from blessing name.
-		traitList.append(createTraitValue(item.name,traitName,1,isDisabled(cleanTraitName,1)))
-		traitList.append(createTraitValue(item.name,traitName,2,isDisabled(cleanTraitName,2)))
-		traitList.append(createTraitValue(item.name,traitName,3,isDisabled(cleanTraitName,3)))
-		traitList.append(createTraitValue(item.name,traitName,4,isDisabled(cleanTraitName,4)))
+		traitList.append(createTraitValue(item.name,traitName,1,isDisabled(traitName,cleanTraitName,1)))
+		traitList.append(createTraitValue(item.name,traitName,2,isDisabled(traitName,cleanTraitName,2)))
+		traitList.append(createTraitValue(item.name,traitName,3,isDisabled(traitName,cleanTraitName,3)))
+		traitList.append(createTraitValue(item.name,traitName,4,isDisabled(traitName,cleanTraitName,4)))
 		updateTraitDimming(traitName)
 	}
 }
@@ -130,8 +130,8 @@ function showSelection(weaponMap,itemName,isDisabled) {
 	const allData = meleeData.concat([{name:'---------',traits:[]}],rangedData)
 
 	const disabledData = await loadJson('data/disabled.json')
-	function isDisabled(trait,value) {
-		return disabledData[trait] && disabledData[trait].includes(value)
+	function isDisabled(trait,traitAlt,value) {
+		return disabledData[trait] && disabledData[trait].includes(value) || disabledData[traitAlt] && disabledData[traitAlt].includes(value)
 	}
 
 	const weaponMap = {}
