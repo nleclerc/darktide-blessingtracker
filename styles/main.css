@@ -61,3 +61,7 @@ h1 {
 	opacity: .2;
 	cursor: not-allowed;
 }
+
+option.fullyowned {
+	color: green;
+}

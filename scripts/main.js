@@ -1,6 +1,8 @@
 
 console.log('Starting...')
 
+const SEPARATOR = '---------'
+
 const weaponSelector = document.querySelector('#weaponlist')
 const traitList = document.querySelector('#traitList')
 const checkboxMap = {}
@@ -17,12 +19,39 @@ async function loadJson(path,property) {
 	return jsonData
 }
 
-function loadData(dataArray) {
+function isFullyOwned(weapon,traits,isDisabled) {
+	if (weapon == SEPARATOR)
+		return false
+
+	for (let trait of traits) {
+		const cleanTrait = cleanupTraitName(trait)
+
+		for (let i=1; i<5; i++) {
+			const valueId = getTraitValueId(weapon,trait,i)
+
+			console.log('>>>>>',trait,!isDisabled(trait,cleanTrait,i),localStorage[valueId] != 'true')
+
+			if (!isDisabled(trait,cleanTrait,i) && localStorage[valueId] != 'true')
+				return false
+		}
+	}
+
+	return true
+}
+
+function loadData(dataArray,isDisabled) {
 	weaponSelector.options.length = 0
 
 	for (let item of dataArray) {
 		console.debug('Processing weapon:',item)
-		weaponSelector.options[weaponSelector.options.length] = new Option(item.name)
+		const option = new Option(item.name)
+
+		if (isFullyOwned(item.name,item.traits,isDisabled)) {
+			option.classList.add('fullyowned')
+			option.label += ' ✅'
+		}
+
+		weaponSelector.options[weaponSelector.options.length] = option
 	}
 }
 
@@ -76,8 +105,12 @@ function updateTraitDimming(traitName) {
 	}
 }
 
+function getTraitValueId(itemName,traitName,level) {
+	return `${itemName}:${traitName}:${getLevelString(level)}`
+}
+
 function createTraitValue(itemName,traitName,level, isDisabled) {
-	const valueId = `${itemName}:${traitName}:${getLevelString(level)}`
+	const valueId = getTraitValueId(itemName,traitName,level)
 
 	const checkbox = document.createElement('input')
 	checkbox.classList.add('valueCheckbox')
@@ -103,9 +136,13 @@ function createTraitValue(itemName,traitName,level, isDisabled) {
 	return container
 }
 
+function cleanupTraitName(name) {
+	return name.replace(/ ?\(.*\)$/,'')
+}
+
 function displayTraits(item, isDisabled) {
 	for (let traitName of item.traits) {
-		const cleanTraitName = traitName.replace(/ ?\(.*\)$/,'')
+		const cleanTraitName = cleanupTraitName(traitName)
 		traitList.append(createDiv('item',cleanTraitName)) // Remove weapon category from blessing name.
 		traitList.append(createTraitValue(item.name,traitName,1,isDisabled(traitName,cleanTraitName,1)))
 		traitList.append(createTraitValue(item.name,traitName,2,isDisabled(traitName,cleanTraitName,2)))
@@ -127,7 +164,7 @@ function showSelection(weaponMap,itemName,isDisabled) {
 (async function() {
 	const meleeData = await loadJson('data/melee.json','melee')
 	const rangedData = await loadJson('data/ranged.json','ranged')
-	const allData = meleeData.concat([{name:'---------',traits:[]}],rangedData)
+	const allData = meleeData.concat([{name:SEPARATOR,traits:[]}],rangedData)
 
 	const disabledData = await loadJson('data/disabled.json')
 	function isDisabled(trait,traitAlt,value) {
@@ -146,17 +183,17 @@ function showSelection(weaponMap,itemName,isDisabled) {
 	console.debug('Current selection:',currentSelection)
 
 	document.querySelector('#meleeButton').addEventListener('click',()=> {
-		loadData(meleeData)
+		loadData(meleeData,isDisabled)
 		showSelection(weaponMap,currentSelection,isDisabled)
 	})
 
 	document.querySelector('#rangedButton').addEventListener('click',()=> {
-		loadData(rangedData)
+		loadData(rangedData,isDisabled)
 		showSelection(weaponMap,currentSelection,isDisabled)
 	})
 
 	document.querySelector('#allButton').addEventListener('click',()=> {
-		loadData(allData)
+		loadData(allData,isDisabled)
 		showSelection(weaponMap,currentSelection,isDisabled)
 	})
 
@@ -166,6 +203,6 @@ function showSelection(weaponMap,itemName,isDisabled) {
 		showSelection(weaponMap,event.target.value,isDisabled)
 	})
 
-	loadData(allData)
+	loadData(allData,isDisabled)
 	showSelection(weaponMap,currentSelection,isDisabled)
 })()
