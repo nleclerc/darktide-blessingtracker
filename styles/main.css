@@ -29,6 +29,8 @@ h1 {
 	flex: 0 0 auto;
 	width: 14em;
 	overflow: auto;
+	background-color: #555;
+	color: #aaa;
 }
 
 #traitList {
