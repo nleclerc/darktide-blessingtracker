@@ -121,6 +121,11 @@
     "bars": ["Damage", "Crowd Control", "First Target", "Penetration", "Defences"]
 },
 {
+	"name": "Pick Axe",
+    "classes": "Ogryn",
+    "traits": ["All or Nothing", "Confident Strike", "Headtaker", "Limbsplitter", "Slaughterer", "Slow and Steady", "Thrust", "Thunderous", "Torment", "Wrath"]
+},
+{
     "name": "Power Maul",
     "primaryAction": "Strikedown",
     "secondaryAction": "Relentless",
