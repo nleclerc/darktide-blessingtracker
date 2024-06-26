@@ -150,6 +150,10 @@
     "bars": ["Damage", "Mobility", "Penetration", "Defences", "First Target"]
 },
 {
+    "name": "Shock Maul",
+    "traits": ["Entropic", "Falter", "Hammerblow", "High Voltage", "Opportunist", "Skullcrusher", "Stunned Expression", "Thrust"]
+},
+{
     "name": "Slab Shield",
     "primaryAction": "Relentless",
     "secondaryAction": "Relentless",
