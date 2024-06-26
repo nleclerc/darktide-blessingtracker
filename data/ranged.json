@@ -49,6 +49,10 @@
     "bars": ["Damage", "Mobility", "Stopping Power", "Ammo", "Collateral"]
 },
 {
+    "name": "Bolt Pistol",
+    "traits": ["Execution", "Deadly Accurate", "Gloryhunter", "Lethal Proximity", "Point Blank", "Puncture", "Run N Gun", "Surgical"]
+},
+{
     "name": "Boltgun",
     "primaryAction": "Hip Fire - Burst-fire",
     "secondaryAction": "ADS - Semi-automatic",
