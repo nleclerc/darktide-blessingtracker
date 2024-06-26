@@ -121,7 +121,7 @@
     "bars": ["Damage", "Crowd Control", "First Target", "Penetration", "Defences"]
 },
 {
-	"name": "Pick Axe",
+	"name": "Pickaxe",
     "classes": "Ogryn",
     "traits": ["All or Nothing", "Confident Strike", "Headtaker", "Limbsplitter", "Slaughterer", "Slow and Steady", "Thrust", "Thunderous", "Torment", "Wrath"]
 },
