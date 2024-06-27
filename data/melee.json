@@ -151,7 +151,7 @@
 },
 {
     "name": "Shock Maul",
-    "traits": ["Entropic", "Falter", "Hammerblow", "High Voltage", "Opportunist", "Skullcrusher", "Stunned Expression", "Thrust"]
+    "traits": ["Falter", "Hammerblow", "High Voltage", "Lightning Reflexes", "Opportunist", "Overwhelming Force", "Skullcrusher", "Thrust"]
 },
 {
     "name": "Slab Shield",
