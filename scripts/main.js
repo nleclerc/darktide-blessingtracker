@@ -182,21 +182,6 @@ function showSelection(weaponMap,itemName,isDisabled) {
 	const currentSelection = document.location.hash.substring(1).replaceAll('_',' ')
 	console.debug('Current selection:',currentSelection)
 
-	document.querySelector('#meleeButton').addEventListener('click',()=> {
-		loadData(meleeData,isDisabled)
-		showSelection(weaponMap,currentSelection,isDisabled)
-	})
-
-	document.querySelector('#rangedButton').addEventListener('click',()=> {
-		loadData(rangedData,isDisabled)
-		showSelection(weaponMap,currentSelection,isDisabled)
-	})
-
-	document.querySelector('#allButton').addEventListener('click',()=> {
-		loadData(allData,isDisabled)
-		showSelection(weaponMap,currentSelection,isDisabled)
-	})
-
 	weaponSelector.addEventListener('change',(event)=> {
 		console.debug('Selection change:',event.target.value,weaponMap[event.target.value])
 		document.location.hash = event.target.value.replaceAll(' ','_')
