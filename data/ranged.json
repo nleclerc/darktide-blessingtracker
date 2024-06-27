@@ -1,6 +1,10 @@
 {
 "ranged": [
 {
+    "name": "Assault Shotgun",
+    "traits": ["Both Barrels", "Deathspitter", "Flechette", "Full Bore", "Hit & Run", "Man-Stopper", "Run N Gun", "Scattershot", "Speedload", "Terrifying Barrage"]
+},
+{
     "name": "Autogun (Braced)",
     "primaryAction": "Hip Fire - Fully Automatic",
     "secondaryAction": "Braced - Fully Automatic",
